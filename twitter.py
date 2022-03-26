@@ -1,13 +1,10 @@
 from socialMedia import SocialMedia
 
 class Twitter(SocialMedia):
-    def __init__(self, name , users):
+    def __init__(self, name):
         super().__init__(name)
-        self.users = users
         self.tweets = []
 
-    def getTweets(self):
-        return self.users
 
     def getTweet(self):
         return self.tweets
@@ -21,7 +18,7 @@ class Twitter(SocialMedia):
         return newTweet
 
 
-Application = Twitter("twitter","")
+Application = Twitter("twitter")
 
 print(f"the name of application is {Application.getName()}")
 
